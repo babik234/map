@@ -41,6 +41,8 @@ async function fetchJSONData() {
     } catch (error) {
         console.error("Unable to fetch data:", error);
     }
+    let markers = L.markerClusterGroup();
+
     museumsArray.forEach((e) => {
         let lng = e.lng;
         let lat = e.lat;
@@ -56,8 +58,10 @@ async function fetchJSONData() {
          
             `,
         });
-        marker.bindPopup(popupContent).openPopup();
         marker.addTo(map);
+        marker.bindPopup(popupContent).openPopup();
+        //   markers.addLayer(marker);
+        // map.addLayer(markers);
     });
 
     sellersArray.forEach((e) => {
@@ -76,8 +80,10 @@ async function fetchJSONData() {
       
             `,
         });
-        marker.bindPopup(popupContent).openPopup();
         marker.addTo(map);
+        marker.bindPopup(popupContent).openPopup();
+        // markers.addLayer(marker);
+        //map.addLayer(markers);
     });
 }
 
