@@ -1,3 +1,31 @@
+* {
+    margin: 0;
+}
 .map {
     height: 100vh;
+}
+body {
+    overflow: hidden;
+}
+.title {
+    display: flex;
+    flex-direction: row;
+    font-size: 12px;
+    align-items: center;
+    width: 200px;
+}
+.title h2 {
+    font-size: 12px;
+    font-weight: bold;
+    margin: 3px;
+}
+.leaflet-popup-content {
+    margin: 10px;
+}
+
+.leaflet-popup-content p {
+    margin: 1px;
+}
+.leaflet-popup-content-wrapper {
+    width: auto;
 }
