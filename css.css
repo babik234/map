@@ -29,3 +29,7 @@ body {
 .leaflet-popup-content-wrapper {
     width: auto;
 }
+.input {
+    z-index: 100;
+    position: absolute;
+}
